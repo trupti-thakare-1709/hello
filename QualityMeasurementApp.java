@@ -34,6 +34,14 @@ public class QualityMeasurementApp {
     // Main method to demonstrate Feet equality check
     public static void main(String[] args) {
         System.out.println("Quality Measurement App");
+
+        // created 2 Feet objects with test values
+        Feet obj1 = new Feet(5.5);
+        Feet obj2 = new Feet(5.5);
+
+        // printing the result to verify equality
+        System.out.println(obj1.equals(obj2));
+
     }
 
 }
