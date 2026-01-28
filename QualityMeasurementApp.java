@@ -11,7 +11,11 @@ public class QualityMeasurementApp {
 
         // used encapsulation to store the measurement value as a private final field
         // and ensured immutability by making the value final
-        // private final double feetValue;
+        private final double feetValue;
+
+        public Feet(double feetValue) {
+            this.feetValue = feetValue;
+        }
 
     }
 
