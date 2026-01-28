@@ -13,8 +13,20 @@ public class QualityMeasurementApp {
         // and ensured immutability by making the value final
         private final double feetValue;
 
+        // constructor
         public Feet(double feetValue) {
             this.feetValue = feetValue;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true;
+            if (obj == null || getClass() != obj.getClass())
+                return false;
+            Feet f = (Feet) obj; // casting
+            return Double.compare(this.feetValue, f.feetValue) == 0; // here i have compare double values using
+                                                                     // Double.compare() instead of == opertor.
         }
 
     }
