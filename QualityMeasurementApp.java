@@ -1,0 +1,19 @@
+/* Quantity Measurement App - UC1: Feet measurement equality
+    This  class is responsible for checking the equality of two numerical values measured in feet in the Quantity Measurement Application.
+*/
+
+// package 
+//main class
+public class QualityMeasurementApp {
+
+    // creted inner Feet class to represent Feet measurement
+    public static class Feet {
+
+    }
+
+    // Main method to demonstrate Feet equality check
+    public static void main(String[] args) {
+        System.out.println("Quality Measurement App");
+    }
+
+}
