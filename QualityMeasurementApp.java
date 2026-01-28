@@ -9,6 +9,10 @@ public class QualityMeasurementApp {
     // creted inner Feet class to represent Feet measurement
     public static class Feet {
 
+        // used encapsulation to store the measurement value as a private final field
+        // and ensured immutability by making the value final
+        // private final double feetValue;
+
     }
 
     // Main method to demonstrate Feet equality check
