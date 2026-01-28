@@ -40,7 +40,7 @@ public class QualityMeasurementApp {
         Feet obj2 = new Feet(5.5);
 
         // printing the result to verify equality
-        System.out.println(obj1.equals(obj2));
+        System.out.println("Equal: " + obj1.equals(obj2));
 
     }
 
