@@ -2,15 +2,22 @@
     This  class is responsible for checking the equality of two numerical values measured in feet in the Quantity Measurement Application.
 */
 
-// package 
+// package com.quantitymeasurement.QuantityMeasurementApp;
 //main class
-public class QualityMeasurementApp {
+public class QuantityMeasurementApp {
 
     // creted inner Feet class to represent Feet measurement
+    /* 💡 Why static? :- So you can create Feet objects without creating QualityMeasurementApp
+       Feet obj1 = new Feet(5.5);
+
+       Without static, you’d need:
+          QualityMeasurementApp app = new QualityMeasurementApp();
+          Feet obj1 = app.new Feet(5.5); */
+
     public static class Feet {
 
-        // used encapsulation to store the measurement value as a private final field
-        // and ensured immutability by making the value final
+        // private → Accessible only inside Feet class (encapsulation)
+        // final → Value cannot be changed once assigned
         private final double feetValue;
 
         // constructor
@@ -21,7 +28,7 @@ public class QualityMeasurementApp {
         @Override
         public boolean equals(Object obj) {
             if (this == obj)
-                return true;
+                return true;    //If both references point to same object in memory, they are equal
             if (obj == null || getClass() != obj.getClass())
                 return false;
             Feet f = (Feet) obj; // casting
