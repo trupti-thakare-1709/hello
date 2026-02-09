@@ -7,12 +7,15 @@
 public class QuantityMeasurementApp {
 
     // creted inner Feet class to represent Feet measurement
-    /* 💡 Why static? :- So you can create Feet objects without creating QualityMeasurementApp
-       Feet obj1 = new Feet(5.5);
-
-       Without static, you’d need:
-          QualityMeasurementApp app = new QualityMeasurementApp();
-          Feet obj1 = app.new Feet(5.5); */
+    /*
+     * 💡 Why static? :- So you can create Feet objects without creating
+     * QualityMeasurementApp
+     * Feet obj1 = new Feet(5.5);
+     * 
+     * Without static, you’d need:
+     * QualityMeasurementApp app = new QualityMeasurementApp();
+     * Feet obj1 = app.new Feet(5.5);
+     */
 
     public static class Feet {
 
@@ -28,7 +31,7 @@ public class QuantityMeasurementApp {
         @Override
         public boolean equals(Object obj) {
             if (this == obj)
-                return true;    //If both references point to same object in memory, they are equal
+                return true; // If both references point to same object in memory, they are equal
             if (obj == null || getClass() != obj.getClass())
                 return false;
             Feet f = (Feet) obj; // casting
@@ -38,16 +41,42 @@ public class QuantityMeasurementApp {
 
     }
 
-    // Main method to demonstrate Feet equality check
+    public static class Inches {
+
+        private final double inchValue;
+
+        // constructor
+        public Inches(double inchValue) {
+            this.inchValue = inchValue;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj)
+                return true; // If both references point to same object in memory, they are equal
+            if (obj == null || getClass() != obj.getClass())
+                return false;
+            Inches i = (Inches) obj; // casting
+            return Double.compare(this.inchValue, i.inchValue) == 0;
+        }
+
+    }
+
     public static void main(String[] args) {
         System.out.println("Quality Measurement App");
 
         // created 2 Feet objects with test values
-        Feet obj1 = new Feet(5.5);
-        Feet obj2 = new Feet(5.5);
+        Feet obj1 = new Feet(1.0);
+        Feet obj2 = new Feet(1.0);
 
         // printing the result to verify equality
         System.out.println("Equal: " + obj1.equals(obj2));
+
+        Inches obj3 = new Inches(1.0);
+        Inches obj4 = new Inches(1.0);
+
+        // printing the result to verify equality
+        System.out.println("Equal: " + obj3.equals(obj4));
 
     }
 
